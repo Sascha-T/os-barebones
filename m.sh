@@ -9,7 +9,7 @@ gcc -m32 -c c.c -o c.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
 echo "Linking..."
 gcc -m32 -T l.ld -o o.bin -ffreestanding -O2 -nostdlib b.o c.o -lgcc
 if grub-file --is-x86-multiboot o.bin; then
-  echo "SUCESS | Multiboot confirmed"
+  echo "SUCCESS | Multiboot confirmed"
   echo "Now building grub image"
   ./g.sh
 else
